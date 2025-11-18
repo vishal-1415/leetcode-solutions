@@ -1,11 +1,10 @@
 class Solution {
     public int findNumbers(int[] nums) {
         int count =0;
-        for(int i =0 ;i<nums.length;i++){
+        for(int num : nums){
            int digits=0;
-           
-            while(nums[i]>0){
-                nums[i] /=10;
+            while(num>0){
+                num/=10;
                 digits++;
             }
             if(digits%2==0){
