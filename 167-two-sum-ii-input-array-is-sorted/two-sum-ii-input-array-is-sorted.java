@@ -8,9 +8,9 @@ class Solution {
                 return new int[]{left+1,right+1};
             }
             else if(current_sum>target){
-                right--;
+                right = right -1;
             }else{
-                left++;
+                left = left +1;
             }
             }
             return new int[]{-1,-1};
