@@ -1,19 +1,27 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
         int n = nums.length;
-        for (int i = 0; i < n; i++) {
-            nums[i] *= nums[i];
+        int left = 0;
+        int right = n-1;
+        int index = n-1;
+
+        int[] result = new int[n];
+
+        while(left<=right){
+            int leftsqrt = nums[left] * nums[left];
+            int rightsqrt = nums[right] * nums[right];
+
+            if(leftsqrt<rightsqrt){
+                    result[index] = rightsqrt;
+                    right--;
+                    index--;
+            }else{
+                result[index] = leftsqrt;
+                    left++;
+                    index--;
+            }    
         }
-        Arrays.sort(nums);
-        return nums;
+        return result;
 
-        //    Time Complexity         
-        // Squaring loop: O(n)
-        // Sorting: O(n log n)
-        // Total: O(n log n)
-
-        //    Space Complexity
-        // Sorting uses internal space: O(log n) (Java TimSort)
-        // Overall: O(1) extra (ignoring sort internals)
     }
 }
