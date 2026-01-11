@@ -10,3 +10,8 @@ class Solution {
         return count <= 1;
     }
 }
+// Time complexity:
+// O(n) — single pass through the array.
+
+// Space complexity:
+// O(1) — no extra space used.
