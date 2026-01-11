@@ -8,9 +8,9 @@ class Solution {
             setCopy.add(num);
         }
 
-        for(int num : nums2){
-            if(setCopy.contains(num)){
-                ans.add(num);
+        for(int num : nums2){                  //    Time & Space
+            if(setCopy.contains(num)){         //         Time: O(n + m)
+                ans.add(num);                  //         Space: O(n)
             }
         }
 
