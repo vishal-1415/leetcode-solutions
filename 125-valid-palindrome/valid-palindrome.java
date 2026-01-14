@@ -3,8 +3,8 @@ class Solution {
         int left = 0;
         int right = s.length() - 1;
 
-        while (left < right) {
-
+        while (left < right) {             // O(n) ,O(1)
+                             
              // skip non-alphanumeric
             while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
                 left++;
