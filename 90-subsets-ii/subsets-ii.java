@@ -11,7 +11,7 @@ class Solution {
 
         ans.add(new ArrayList<>(templist));
         for (int i = s; i < nums.length; i++) {
-
+            // Skips duplicates
             if (i > s && nums[i] == nums[i - 1])
                 continue;
 
