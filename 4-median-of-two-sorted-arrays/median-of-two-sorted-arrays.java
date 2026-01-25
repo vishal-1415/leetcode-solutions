@@ -16,7 +16,7 @@ class Solution {
         Arrays.sort(comb);
         int length = comb.length;
 
-        if (length == 1) return comb[0];
+     //   if (length == 1) return comb[0];
         if(length%2 == 1){
             return comb[length/2];
         }
