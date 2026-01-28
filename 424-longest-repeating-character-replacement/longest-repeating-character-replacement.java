@@ -16,7 +16,7 @@
                 FreqMap[s.charAt(left) - 'A']--;
                 left++;
             }
-            windowlength = right - left+1;
+            windowlength = right - left+1;          //TC:O(n)   SC:O(1)
             MaxLength = Math.max(windowlength,MaxLength);
         }
         return MaxLength;
