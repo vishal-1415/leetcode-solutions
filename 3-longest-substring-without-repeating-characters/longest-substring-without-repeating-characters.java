@@ -15,7 +15,7 @@ class Solution {
 
             int currentLength = right - left + 1; //window Size
 
-            CharSet.add(s.charAt(right));// if not Add current character to the set
+            CharSet.add(s.charAt(right));// if not,Add current character to the set
             MaxLength = Math.max(MaxLength, currentLength);
         }
         return MaxLength;
