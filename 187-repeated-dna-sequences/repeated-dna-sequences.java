@@ -2,7 +2,8 @@ class Solution {
     public List<String> findRepeatedDnaSequences(String s) {
         Set<String> seen = new HashSet<>();
         Set<String> repeated = new HashSet<>();
-
+        if(s.length() < 10) return new ArrayList<>();
+        
         // Loop through the string till the last possible 10-length substring
         for (int i = 0; i <= s.length() - 10; i++) {
             //substring(start,end)extracts characters from index start to end- 1
