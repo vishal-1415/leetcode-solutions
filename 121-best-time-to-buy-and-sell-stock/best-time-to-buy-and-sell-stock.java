@@ -6,10 +6,10 @@ class Solution {
 
             if(prices[i] < Buy_Price){
                 Buy_Price = prices[i];
-            }else {
+            }
                 int current_profit = prices[i] - Buy_Price;
                 profit = Math.max(profit,current_profit);
-            }
+            
         }
         return profit;
     }
