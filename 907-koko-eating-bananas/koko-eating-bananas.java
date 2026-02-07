@@ -8,7 +8,7 @@ class Solution {
         }
 
         while (Min_speed < Max_speed) {
-            int mid = Min_speed + (Max_speed - Min_speed) / 2;
+            int mid = Min_speed + (Max_speed - Min_speed) / 2;        //binary Search 
 
             if (EatwithinTime(piles, h, mid)) {
                 Max_speed = mid;
