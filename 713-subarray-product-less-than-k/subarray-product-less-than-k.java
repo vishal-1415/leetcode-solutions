@@ -4,8 +4,8 @@ class Solution {
         int result = 0;
 
         for (int i = 0; i < n; i++) {
-            int subarray_prdt = 1;
-
+            int subarray_prdt = 1;         //TC:O(n^2)  SC:O(1)
+                                           
             for (int j = i ; j < n; j++) {
                 subarray_prdt = subarray_prdt * nums[j];
 
