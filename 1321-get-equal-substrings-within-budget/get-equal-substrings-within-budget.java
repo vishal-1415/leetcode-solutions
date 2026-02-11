@@ -4,7 +4,7 @@ class Solution {
         int left = 0;
         int current = 0;
         int max = 0;
-        for (int right = 0; right < n; right++) {
+        for (int right = 0; right < n; right++) { //TC:O(n)  SC:O(1)
 
             current += Math.abs(s.charAt(right) - t.charAt(right));
 
