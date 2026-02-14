@@ -10,29 +10,23 @@
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ArrayList<Integer> arr = new ArrayList<>();
-
-        while(list1 != null){
-            arr.add(list1.val);
-            list1 = list1.next;
-        }
-        while(list2 != null){
-            arr.add(list2.val);
-            list2 = list2.next;    //Time Complexity: O((n + m) log(n + m))
-        }                          //Space Complexity: O(n + m)
-
-        Collections.sort(arr);
-
         ListNode dummy = new ListNode(-1);
         ListNode temp = dummy;
 
-        for(int i = 0;i<arr.size();i++){
-            temp.next = new ListNode(arr.get(i));
-            temp = temp.next;
+        while(list1 != null && list2 != null){
+            if(list1.val <= list2.val){
+                temp.next = list1;
+                list1 = list1.next;
+            }else{
+                temp.next = list2;
+                list2 = list2.next;
+            }
+            temp = temp.next; // Move forward in merged list
         }
-
-
-    return dummy.next;
-
-    }
+        // Attach remaining nodes (only one list will have nodes)
+        if(list1 != null) temp.next = list1;        
+        if(list2 != null) temp.next = list2;
+        
+    return dummy.next;                        // TC: O(n + m)      
+    }                                         // SC: O(1)
 }
