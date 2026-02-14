@@ -18,8 +18,8 @@ class Solution {
         }
         while(list2 != null){
             arr.add(list2.val);
-            list2 = list2.next;
-        }
+            list2 = list2.next;    //Time Complexity: O((n + m) log(n + m))
+        }                          //Space Complexity: O(n + m)
 
         Collections.sort(arr);
 
