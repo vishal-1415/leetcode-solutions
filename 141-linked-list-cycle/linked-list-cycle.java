@@ -9,7 +9,7 @@
  *     }
  * }
  */
-public class Solution {
+public class Solution {                       // Floyd's cycle detection (slow–fast pointers)
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
