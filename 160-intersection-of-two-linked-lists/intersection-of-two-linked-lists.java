@@ -15,7 +15,7 @@ public class Solution {
         ListNode tempB = headB;
 
             while (tempA != tempB) {
-            tempA = (tempA == null) ? headB : tempA.next;
+            tempA = (tempA == null) ? headB : tempA.next; //if(tempA==null){headB} else{tempA=tempA.next}
             tempB = (tempB == null) ? headA : tempB.next;
         }
         
