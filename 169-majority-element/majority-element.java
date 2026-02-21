@@ -4,7 +4,7 @@ class Solution {
         int votes = 0;
         int candidate = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { //Boyer–Moore majority vote algorithm
             if (votes == 0) {
                 candidate = nums[i]; //set candidate[nums] if votes is Zero
             }
