@@ -6,11 +6,11 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
             if (votes == 0) {
-                candidate = nums[i];
+                candidate = nums[i]; //set candidate[nums] if votes is Zero
             }
 
             if (nums[i] == candidate) {
-                votes++;
+                votes++;                     //TC :O(n) SC:O(1)
             } else {
                 votes--;
             }
