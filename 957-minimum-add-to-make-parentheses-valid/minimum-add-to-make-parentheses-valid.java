@@ -7,7 +7,7 @@ class Solution {
             if(ch == '('){
                 countOpening++;
             }else{
-                if(countOpening > 0){
+                if(countOpening > 0){    //TC:O(n)  SC:O(1)
                     countOpening--;
                 }else{
                     countClosing++;
