@@ -1,17 +1,23 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int n = nums.length;
-        int max_product = nums[0];
-                                           //TC:O(n^2)   SC:O(1)
-        for (int i = 0; i < n; i++) {
-            int current_product = 1; // initized to 1 bcuz, 0 * anything is Zero
-            for (int j = i; j < n; j++) {
+        int max = nums[0];
+        int min = nums[0];
+        int ans = nums[0];
 
-                current_product *= nums[j];
-                max_product = Math.max(max_product, current_product);
+        for (int i = 1; i < nums.length; i++) {
 
+            if (nums[i] < 0) {      // TC:O(n)  SC:O(1)
+                int temp = max;
+                max = min;
+                min = temp;
             }
+
+            max = Math.max(nums[i], max * nums[i]);
+            min = Math.min(nums[i], min * nums[i]);
+
+            ans = Math.max(ans, max);
         }
-        return max_product;
+        return ans;
     }
+
 }
