@@ -7,8 +7,7 @@ class Solution {
                     dfs(grid, i, j, 2);
                 }
             }
-        }
-        // check remaining fresh oranges
+        }// check remaining fresh oranges
         int max_time = 2;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
@@ -20,7 +19,6 @@ class Solution {
         }
         return max_time - 2;
     }
-
     public void dfs(int[][] grid, int i, int j, int time) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length)
             return;
