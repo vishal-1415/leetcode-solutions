@@ -7,12 +7,12 @@ class Solution {
         int[] number = { 1000, 900, 500, 400, 100, 90, 50,
                            40, 10, 9, 5, 4, 1 };
 
-        StringBuilder roman = new StringBuilder();
+        StringBuilder roman = new StringBuilder(); // roman = ""
 
         for (int i = 0; i < number.length; i++) {
             while (num >= number[i]) {              //TC:O(1)  SC:O(1)
                 num -= number[i];
-                roman.append(symbols[i]);
+                roman.append(symbols[i]);  // roman += symbols[i]
             }
         }
         return roman.toString();
