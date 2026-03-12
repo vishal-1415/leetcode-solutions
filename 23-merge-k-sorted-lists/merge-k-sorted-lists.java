@@ -20,7 +20,7 @@ class Solution {
             return list[start];
         }
         if(start+1 == end){
-            return mergeTwoLists(list[start] ,list[end]);
+            return mergeTwoLists(list[start] ,list[end]);    //TC :O(N log K)   SC:O(K)
         }
 
         int mid = start + (end - start)/2;
@@ -46,6 +46,6 @@ class Solution {
         if(list1 != null) temp.next = list1;        
         if(list2 != null) temp.next = list2;
         
-    return dummy.next;                        // TC: O(n + m)      
+    return dummy.next;                          
     } 
 }
