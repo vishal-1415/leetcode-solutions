@@ -7,7 +7,7 @@ class Solution {
 
     while(n%2 == 0){
         n /= 2;
-
+    // TC : O(log n)
     }
     return n == 1;
     }
