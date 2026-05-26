@@ -8,12 +8,11 @@ class Solution {
         else if(n==1)
            return 1;
         else{
-            while(count<=n){
-                int temp = b;
-                b = a+b;
-                a =temp;
-                count++;
-            }
+         for(int i = 0;i<=n;i++){
+            int c = a + b;
+            b = a;
+            a = c;
+         }
         }
         return b;
     }
