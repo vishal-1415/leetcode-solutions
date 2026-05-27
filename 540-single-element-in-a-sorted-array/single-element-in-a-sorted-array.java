@@ -4,9 +4,9 @@ class Solution {
         for(int n : nums){
             map.put(n,map.getOrDefault(n,0)+1);
         }
-        for(int value : map.keySet()){
-            if(map.get(value) == 1){
-                return value;
+        for(int key : map.keySet()){
+            if(map.get(key) == 1){
+                return key;
             }
         }
     return -1;    
