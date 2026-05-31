@@ -5,5 +5,5 @@ class Solution:
             digit = n % 10
             sum += digit
             n //= 10
-            print(sum)
+            
         return sum
