@@ -1,6 +1,17 @@
 class Solution {
     public String toLowerCase(String s) {
-    
-    return s.toLowerCase();
+        
+        StringBuilder sb = new StringBuilder();
+
+        for(char ch : s.toCharArray()){
+
+            if(65 <= ch && ch <= 90){
+                sb.append((char)(ch + 32));
+            }else{
+                sb.append(ch);
+            }
+        }
+
+    return sb.toString();
     }
 }
