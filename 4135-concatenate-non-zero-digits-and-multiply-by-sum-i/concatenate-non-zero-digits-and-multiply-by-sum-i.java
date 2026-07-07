@@ -27,7 +27,7 @@ class Solution {
             sum += digit;
             x_copy /= 10;
         }
-    System.out.println(sum);
+    
         long ans = (long)num * sum;
 
     return ans;
