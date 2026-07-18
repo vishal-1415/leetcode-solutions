@@ -12,7 +12,11 @@ class Solution {
     }
 
     public int gcd(int a, int b) {
-        if (a == 0) return b;         
-        return gcd(b % a, a);         
+        while(b>0){
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }  
+    return a;       
     }
 }
